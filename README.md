@@ -1,8 +1,10 @@
 Driver Drowsiness Detection System
+
 A real-time Driver Drowsiness and Yawning Detection System built using Flask, OpenCV, Dlib, and Facial Landmarks. The system uses a webcam to monitor the driver's eyes and mouth, detect signs of fatigue or sleep, and trigger an audio alert if needed.
 
 Features
 Real-time face and eye detection using dlib and OpenCV
+
 Detects:
 Eye closure (sleep)
 Partial eye closure (drowsiness)
@@ -10,6 +12,7 @@ Yawning (via mouth aspect ratio)
 Plays an audio alert when drowsiness or yawning is detected
 Web interface to start/stop detection
 Live webcam video stream in the browser
+
 Project Structure
 DRIVER-DROWSINESS-DETECTION/ │ ├── static/ │ └── alarm.mp3 # Alarm sound file │ ├── templates/ │ └── index.html # Web interface │ ├── app.py # Main Flask app with detection ├── driver_drowsiness.py # Optional: Modular detection logic ├── shape_predictor_68_face_landmarks.dat # Dlib landmark model └── README.md
 
@@ -20,8 +23,8 @@ Flask
 dlib
 imutils
 numpy
-Install with:
 
+Install with:
 pip install opencv-python flask dlib imutils numpy
 
 
