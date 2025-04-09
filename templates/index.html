@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detection System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            margin: 0;
+        }
+        #video-container {
+            margin-top: 20px;
+        }
+        #video {
+            width: 80%;
+            max-width: 700px;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+        #status {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .start-btn {
+            background-color: green;
+            color: white;
+        }
+        .stop-btn {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Driver Drowsiness Detection System</h1>
+
+    <div id="video-container">
+        <img id="video" src="{{ url_for('video_feed') }}" alt="Live Video Feed">
+    </div>
+
+    <p id="status">Status: <span id="status-text">Initializing...</span></p>
+<script>
+    function updateStatus(newStatus) {
+        document.getElementById("status-text").innerText = newStatus;
+        if (newStatus === "FOCUS!") {
+            alert("FOCUS! Stop using your phone.");
+        }
+    }
+</script>
+
+
+    <button class="btn start-btn" onclick="startDetection()">Start Detection</button>
+    <button class="btn stop-btn" onclick="stopDetection()">Stop Detection</button>
+
+    <script>
+        function startDetection() {
+            fetch('/start')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("status-text").innerText = "Detection Started";
+                });
+        }
+
+        function stopDetection() {
+            fetch('/stop')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("status-text").innerText = "Detection Stopped";
+                });
+        }
+    </script>
+
+</body>
+</html>
