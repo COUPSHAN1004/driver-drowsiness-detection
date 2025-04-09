@@ -40,7 +40,7 @@ pip install opencv-python flask dlib imutils numpy
 
 Setup Instructions
 Clone the repository:
-git clone https://github.com/your-username/driver-drowsiness-detection.git
+git clone https://github.com/COUPSHAN1004/driver-drowsiness-detection.git
 cd driver-drowsiness-detection
 
 Download the shape predictor model:
@@ -85,4 +85,4 @@ License
 This project is licensed under the MIT License. Feel free to use and modify.
 
 🙌 Author
-Made with ❤️ 
+Made with ❤️ By Swasti Sawarnik and Vanshika Goyal
