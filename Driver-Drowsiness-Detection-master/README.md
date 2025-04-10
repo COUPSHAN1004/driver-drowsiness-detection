@@ -18,7 +18,19 @@ A real-time Driver Drowsiness and Yawning Detection System built using **Flask**
 ---
 
 ## Project Structure
-DRIVER-DROWSINESS-DETECTION/ │ ├── static/ │ └── alarm.mp3 # Alarm sound file │ ├── templates/ │ └── index.html # Web interface │ ├── app.py # Main Flask app with detection ├── driver_drowsiness.py # Optional: Modular detection logic ├── shape_predictor_68_face_landmarks.dat # Dlib landmark model └── README.md
+DRIVER-DROWSINESS-DETECTION/
+│
+├── static/
+│   └── alarm.mp3                  # Alarm sound file triggered on drowsiness
+│
+├── templates/
+│   └── index.html                 # Web interface for the detection system
+│
+├── app.py                        # Main Flask application integrating detection and frontend
+├── driver_drowsiness.py         # (Optional) Modular detection logic separated for clarity
+├── shape_predictor_68_face_landmarks.dat  # Pre-trained dlib model for facial landmark detection
+└── README.md                     # Project overview, setup guide, and usage instructions
+
 
 
 ---
