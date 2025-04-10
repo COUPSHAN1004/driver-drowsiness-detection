@@ -85,4 +85,4 @@ License
 This project is licensed under the MIT License. Feel free to use and modify.
 
 🙌 Author
-Made with ❤️ By Swasti Sawarnik and Vanshika Goyal
+Made By Swasti Sawarnik and Vanshika Goyal
